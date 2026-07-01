@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+  <defs>
+    <radialGradient id="skin" cx="42%" cy="25%" r="76%">
+      <stop offset="0%" stop-color="#ffe7d5"/>
+      <stop offset="58%" stop-color="#f2b894"/>
+      <stop offset="100%" stop-color="#cc8165"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="12%" y1="6%" x2="88%" y2="96%">
+      <stop offset="0%" stop-color="#5c4039"/>
+      <stop offset="38%" stop-color="#2b1916"/>
+      <stop offset="100%" stop-color="#100807"/>
+    </linearGradient>
+    <linearGradient id="dress" x1="20%" y1="8%" x2="82%" y2="98%">
+      <stop offset="0%" stop-color="#ef1f46"/>
+      <stop offset="46%" stop-color="#b5082b"/>
+      <stop offset="100%" stop-color="#650015"/>
+    </linearGradient>
+    <linearGradient id="dressLight" x1="15%" y1="5%" x2="75%" y2="95%">
+      <stop offset="0%" stop-color="#ff5a72"/>
+      <stop offset="50%" stop-color="#c70b31"/>
+      <stop offset="100%" stop-color="#7c0019"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="15%" y1="10%" x2="86%" y2="90%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="18%" stop-color="#b9bec5"/>
+      <stop offset="42%" stop-color="#f5f7fb"/>
+      <stop offset="72%" stop-color="#777d86"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="base" x1="15%" y1="5%" x2="82%" y2="100%">
+      <stop offset="0%" stop-color="#26e0d0"/>
+      <stop offset="54%" stop-color="#10b7cb"/>
+      <stop offset="100%" stop-color="#1556c7"/>
+    </linearGradient>
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="36" stdDeviation="34" flood-color="#0f172a" flood-opacity=".25"/>
+    </filter>
+    <filter id="toyGloss" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
+      <feSpecularLighting in="blur" surfaceScale="4" specularConstant=".42" specularExponent="24" lighting-color="#ffffff" result="spec">
+        <fePointLight x="150" y="-150" z="260"/>
+      </feSpecularLighting>
+      <feComposite in="spec" in2="SourceAlpha" operator="in" result="lit"/>
+      <feMerge>
+        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="lit"/>
+      </feMerge>
+    </filter>
+    <clipPath id="dressClip">
+      <path d="M285 587C292 520 354 478 450 478C546 478 608 520 615 587L650 946C656 1007 607 1057 546 1057H354C293 1057 244 1007 250 946L285 587Z"/>
+    </clipPath>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <ellipse cx="450" cy="1037" rx="250" ry="38" fill="#0f172a" opacity=".18"/>
+
+    <circle cx="450" cy="112" r="68" fill="none" stroke="url(#metal)" stroke-width="22"/>
+    <circle cx="450" cy="112" r="39" fill="none" stroke="#ffffff" stroke-width="5" opacity=".9"/>
+    <path d="M423 178H477C484 178 490 184 490 191V248C490 255 484 261 477 261H423C416 261 410 255 410 248V191C410 184 416 178 423 178Z" fill="url(#metal)"/>
+    <circle cx="450" cy="262" r="27" fill="url(#metal)"/>
+
+    <path d="M190 357C204 230 306 163 450 163C594 163 696 230 710 357C724 494 626 607 450 607C274 607 176 494 190 357Z" fill="url(#hair)"/>
+    <path d="M226 390C214 279 299 211 417 197C558 180 664 252 666 391C668 522 580 612 450 612C320 612 240 522 226 390Z" fill="url(#skin)" filter="url(#toyGloss)"/>
+
+    <path d="M233 384C266 250 378 203 512 229C455 274 372 296 287 289C263 319 248 348 240 391L233 384Z" fill="url(#hair)"/>
+    <path d="M517 229C612 239 671 315 664 434C639 351 591 298 526 273L517 229Z" fill="url(#hair)"/>
+    <path d="M604 333C692 407 734 553 696 719C665 628 648 542 650 459L604 333Z" fill="url(#hair)"/>
+    <path d="M286 294C252 388 262 514 313 609C241 574 202 489 209 389L286 294Z" fill="url(#hair)"/>
+    <path d="M225 391C187 398 168 426 176 466C183 504 214 524 246 509L225 391Z" fill="url(#skin)"/>
+    <path d="M675 391C713 398 732 426 724 466C717 504 686 524 654 509L675 391Z" fill="url(#skin)"/>
+
+    <path d="M318 364C348 339 388 337 418 360" fill="none" stroke="#2a1714" stroke-width="10" stroke-linecap="round"/>
+    <path d="M482 360C512 337 552 339 582 364" fill="none" stroke="#2a1714" stroke-width="10" stroke-linecap="round"/>
+    <ellipse cx="372" cy="421" rx="28" ry="36" fill="#101827"/>
+    <ellipse cx="528" cy="421" rx="28" ry="36" fill="#101827"/>
+    <circle cx="383" cy="404" r="9" fill="#ffffff"/>
+    <circle cx="539" cy="404" r="9" fill="#ffffff"/>
+    <ellipse cx="326" cy="478" rx="36" ry="22" fill="#f29aa0" opacity=".34"/>
+    <ellipse cx="574" cy="478" rx="36" ry="22" fill="#f29aa0" opacity=".34"/>
+    <path d="M450 434C437 464 436 483 456 491" fill="none" stroke="#c47c62" stroke-width="8" stroke-linecap="round"/>
+    <path d="M364 515C410 570 493 572 537 515C510 545 392 545 364 515Z" fill="#ffffff"/>
+    <path d="M356 508C408 557 493 558 544 508" fill="none" stroke="#b80028" stroke-width="18" stroke-linecap="round"/>
+    <path d="M379 532H521" stroke="#d9e1e8" stroke-width="3" opacity=".85"/>
+
+    <path d="M350 512C371 490 411 477 450 477C489 477 529 490 550 512L532 565H368L350 512Z" fill="url(#dress)" filter="url(#toyGloss)"/>
+    <path d="M285 587C292 520 354 478 450 478C546 478 608 520 615 587L650 946C656 1007 607 1057 546 1057H354C293 1057 244 1007 250 946L285 587Z" fill="url(#dress)" filter="url(#toyGloss)"/>
+    <g clip-path="url(#dressClip)">
+      <path d="M313 530C380 604 526 605 589 530L618 681C519 745 380 745 282 681L313 530Z" fill="url(#dressLight)" opacity=".72"/>
+      <path d="M338 515C386 654 377 843 319 1057H246V646C252 587 284 543 338 515Z" fill="#650015" opacity=".38"/>
+      <path d="M562 515C514 654 523 843 581 1057H654V646C648 587 616 543 562 515Z" fill="#3f000d" opacity=".33"/>
+      <path d="M450 481V1057" stroke="#ff5b76" stroke-width="8" opacity=".35"/>
+      <path d="M323 716C395 751 505 755 579 716" fill="none" stroke="#ff7688" stroke-width="7" opacity=".28"/>
+      <path d="M309 846C395 884 511 888 594 846" fill="none" stroke="#ff7688" stroke-width="7" opacity=".25"/>
+    </g>
+
+    <path d="M290 672C219 693 183 760 201 839C214 898 251 929 293 910C323 897 332 864 318 833C301 792 314 755 354 740L290 672Z" fill="url(#skin)"/>
+    <path d="M610 672C681 693 717 760 699 839C686 898 649 929 607 910C577 897 568 864 582 833C599 792 586 755 546 740L610 672Z" fill="url(#skin)"/>
+
+    <path d="M338 1032C348 1060 380 1079 418 1079H482C520 1079 552 1060 562 1032H338Z" fill="url(#base)"/>
+    <rect x="304" y="1067" width="292" height="36" rx="18" fill="#0f172a" opacity=".16"/>
+    <path d="M340 1052C385 1075 515 1075 560 1052" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+
+    <path d="M235 181C255 134 331 111 410 128" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" opacity=".22"/>
+    <path d="M291 307C342 240 467 211 586 265" fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" opacity=".14"/>
+    <path d="M351 590C411 622 489 623 550 590" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity=".24"/>
+  </g>
+</svg>
