@@ -91,11 +91,11 @@ export function CatalogView({ slug }: { slug: string }) {
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">{description}</p>
             </div>
           </div>
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
             {items.map((item, index) => (
               <motion.article key={item.href} className="group overflow-hidden rounded-[28px] bg-white shadow-xl shadow-slate-300/45 ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-2xl" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: index * 0.04 }}>
                 <Link href={item.href} className="block">
-                  <div className="relative h-64">
+                  <div className="relative h-32 sm:h-64">
                     {item.image_url ? (
                       <Image src={item.image_url} alt={item.title} fill sizes="(min-width: 1024px) 25vw, 90vw" className="object-contain p-3 drop-shadow-xl transition duration-500 group-hover:scale-105" />
                     ) : (

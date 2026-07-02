@@ -87,7 +87,7 @@ export type PhpAdmin = {
   email: string;
 };
 
-export const PHP_API_URL = process.env.NEXT_PUBLIC_PHP_API_URL ?? "http://localhost/cardforge-api";
+export const PHP_API_URL = process.env.NEXT_PUBLIC_PHP_API_URL ?? "https://test4.ayu.edu.kz/cardforge-api";
 export const AUTH_TOKEN_KEY = "cardforge.php.token";
 export const AUTH_USER_KEY = "cardforge.php.user";
 export const ADMIN_TOKEN_KEY = "cardforge.php.admin.token";

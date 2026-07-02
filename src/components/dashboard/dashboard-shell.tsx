@@ -139,11 +139,11 @@ export function DashboardShell() {
             <Button asChild variant="secondary"><Link href="/catalog/brilogs"><Grid3X3 className="h-4 w-4" /> View full 3D catalog</Link></Button>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
             {brilogs.slice(0, 4).map((brilog, index) => (
               <motion.article
                 key={brilog.id}
-                className="group relative min-h-[430px] overflow-hidden rounded-[34px] bg-gradient-to-br from-white via-teal-50 to-slate-100 p-6 shadow-xl shadow-slate-300/50 transition hover:-translate-y-1 hover:shadow-2xl"
+                className="group relative min-h-[220px] overflow-hidden rounded-[34px] bg-gradient-to-br from-white via-teal-50 to-slate-100 p-6 shadow-xl shadow-slate-300/50 transition hover:-translate-y-1 hover:shadow-2xl sm:min-h-[430px]"
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.06 }}
@@ -152,7 +152,7 @@ export function DashboardShell() {
                 <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-teal-300/30 blur-2xl" />
                 <div className="absolute -bottom-20 left-8 h-52 w-52 rounded-full bg-blue-300/25 blur-2xl" />
                 <div className="relative z-10 flex h-full flex-col">
-                  <div className="relative min-h-64 flex-1">
+                  <div className="relative min-h-32 flex-1 sm:min-h-64">
                     {brilog.image_url ? (
                       <Image
                         src={brilog.image_url}
@@ -193,7 +193,7 @@ export function DashboardShell() {
             </div>
             <Button asChild variant="secondary"><Link href="/catalog/cards"><Grid3X3 className="h-4 w-4" /> View full card catalog</Link></Button>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 xl:grid-cols-5">
             {products.slice(0, 4).map((product, index) => (
               <motion.article
                 key={product.id}
@@ -204,7 +204,7 @@ export function DashboardShell() {
               >
                 <Link href={`/products/${product.id}`} className="block">
                   <div
-                    className="h-44 bg-cover bg-center"
+                    className="h-24 bg-cover bg-center sm:h-44"
                     style={{
                       backgroundImage: product.image_url ? `url("${product.image_url}")` : productFallbacks[index % productFallbacks.length],
                     }}
@@ -252,7 +252,7 @@ export function DashboardShell() {
               </div>
               <Button asChild variant="secondary"><Link href={`/catalog/${catalog.slug}`}><Grid3X3 className="h-4 w-4" /> View full catalog</Link></Button>
             </div>
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-2 xl:grid-cols-4">
               {(catalog.products ?? []).slice(0, 4).map((item, index) => (
                 <CatalogProductCard key={item.id} catalog={catalog} item={item} index={index} />
               ))}
@@ -267,13 +267,13 @@ export function DashboardShell() {
 function CatalogProductCard({ catalog, item, index }: { catalog: PhpCatalog; item: PhpCatalogProduct; index: number }) {
   return (
     <motion.article
-      className="group relative min-h-[380px] overflow-hidden rounded-[30px] bg-white p-5 shadow-xl shadow-slate-300/45 ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-2xl"
+      className="group relative min-h-[200px] overflow-hidden rounded-[30px] bg-white p-5 shadow-xl shadow-slate-300/45 ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-2xl sm:min-h-[380px]"
       initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.06 }}
     >
       <Link href={`/catalog/${catalog.slug}/${item.id}`} className="absolute inset-0 z-20" aria-label={`View ${item.title}`} />
-      <div className="relative h-56">
+      <div className="relative h-28 sm:h-56">
         {item.image_url ? (
           <Image src={item.image_url} alt={item.title} fill sizes="(min-width: 1024px) 25vw, 90vw" className="object-contain drop-shadow-xl transition duration-500 group-hover:scale-105" />
         ) : (

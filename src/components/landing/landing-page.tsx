@@ -82,7 +82,7 @@ export function LandingPage() {
       </section>
 
       <Section id="features" eyebrow="Platform" title="Every serious card workflow, in one polished studio.">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <motion.div key={feature.title} {...fadeUp}>
               <Card className="glass h-full">
@@ -98,12 +98,12 @@ export function LandingPage() {
       </Section>
 
       <Section id="templates" eyebrow="Templates" title="Launch with professional card categories already modeled.">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
           {templates.map((template) => (
             <motion.div key={template.id} {...fadeUp}>
               <Card className="group overflow-hidden bg-card/75 transition hover:-translate-y-1 hover:shadow-glow">
                 <div
-                  className="h-44 border-b"
+                  className="h-24 border-b sm:h-44"
                   style={{
                     background: `linear-gradient(135deg, ${template.palette[0]}, ${template.palette[2]}, ${template.palette[3]})`,
                   }}
